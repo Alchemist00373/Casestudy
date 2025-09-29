@@ -1,0 +1,334 @@
+html,
+body {
+    height: 100%;
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== Header ===== */
+header {
+    width: 100%;
+    background-color: #556B2F;
+    color: #EFF5D2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+/* Logo and Name */
+header .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-200px);
+}
+
+header .logo h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+    border-radius: 100%;
+}
+
+/* Nav links (desktop) */
+header .navlinks {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    transform: translateX(-420px);
+}
+
+header .navlinks a {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    display: inline-block;
+    color: #EFF5D2;
+}
+
+header .navlinks a:hover {
+    background-color: #EFF5D2;
+    color: #556B2F;
+    border-radius: 8px;
+}
+
+header .navlinks a.active {
+    border-bottom: 2px solid #EFF5D2;
+}
+
+
+/* Home Section */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Background */
+.hero {
+    flex: 1;
+    min-height: calc(100vh - 120px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Background (image or video element) */
+.hero .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px); 
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 71, 39, 0.2);
+    z-index: -2;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Text content (left side) */
+.hero .content {
+    position: relative;
+    flex: 1;
+    max-width: 900px;
+    height: 350px;
+    z-index: 1;
+    padding: 30px;
+    border-left: 2px white solid;
+}
+
+.hero .content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 800px;
+}
+
+.hero .content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    width: 500px;
+    transform: translateX(70px);
+}
+
+.hero .content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: justify;
+    width: 500px;
+    transform: translateX(70px);
+}
+
+.hero .content .btn {
+    padding: 14px 36px;
+    font-size: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(220px);
+}
+
+.hero .content .btn:hover {
+    background: #C6D870;
+}
+
+/* Form (right side) */
+.hero .right-section {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 14px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.hero .right-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero .right-section .input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .right-section .input-box label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.hero .right-section input,
+.hero .right-section textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+}
+
+.hero .right-section textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.hero .right-section button {
+    padding: 12px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hero .right-section button:hover {
+    background: #8FA31E;
+}
+
+
+/* ===== Footer ===== */
+footer {
+    background-color: #556B2F;
+    color: #EFF5D2;
+    padding: 40px 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 40px;
+}
+
+footer .footer-container div {
+    flex: 1 1 250px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    border-bottom: 2px solid #C6D870;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer p,
+footer li,
+footer a {
+    font-size: 20px;
+    color: #EFF5D2;
+}
+
+footer ul {
+    padding: 0;
+    transform: translateY(-15px);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer ul li {
+    margin-bottom: 6px;
+}
+
+footer ul li a:hover {
+    color: #C6D870;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+    transform: translateX(-15px);
+}
+
+.socials a i,
+footer .social-icons a i {
+    font-size: 35px;
+    color: #EFF5D2;
+    margin: 0 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.socials a i:hover,
+footer .social-icons a i:hover {
+    color: #C6D870;
+}
+
+footer .divider {
+    margin: 5px auto;
+    width: 90%;
+    border-top: solid #C6D870 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #EFF5D2;
+}
