@@ -9,6 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Print button with ID 'printButton' not found.");
     }
-
-
 });
