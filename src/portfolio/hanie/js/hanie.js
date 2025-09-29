@@ -10,3 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Print button with ID 'printButton' not found.");
     }
 });
+
+    function sendMessage(e) {
+    e.preventDefault();
+    alert("✅ Thank you! Your message has been received.");
+    e.target.reset();
+    }
