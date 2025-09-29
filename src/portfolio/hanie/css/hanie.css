@@ -7,6 +7,57 @@
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+nav {
+    width: 100%;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #007bff;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        padding: 12px;
+    }
+}
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -148,6 +199,79 @@ img {
 
 #printButton:hover {
     background-color: #00681a;
+}
+
+#contact {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contact form textarea {
+    resize: vertical;
+}
+
+#contact form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #00b853;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+#contact form button[type="submit"]:hover {
+    background-color: #028f31;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 15px;
+    }
+    
+    #contact h2 {
+        font-size: 2em;
+    }
 }
 
 /* Print Styles */
