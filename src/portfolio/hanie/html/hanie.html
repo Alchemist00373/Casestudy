@@ -1,81 +1,86 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hanie Fe Marie C. Junio - Professional Resume</title>
-        <link rel="stylesheet" href="../css/hanie.css">
-    </head>
-    <body>
-        <header class="header">
-                        <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-            <img src="../../../img/hanie.jpg" alt="Hanie Fe Junio">
-            <h1>Hanie Fe Marie C. Junio</h1>
-            <p class="tagline">Full Stack Developer | Digital Artist | Team Leader</p>
-            <div class="contact-info">
-                <span>+939303159167</span> |
-                <span>jane.doe@email.com</span> |
-                <a href="https://github.com/hfmjunio" target="_blank">GitHub</a>
-            </div>
-        </header>
+<!DOCTYPE html>
+<html lang="en">
 
-        <main class="container">
-            <section class="section summary">
-                <h2></h2>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanie Fe Marie C. Junio - Professional Resume</title>
+    <link rel="stylesheet" href="../css/hanie.css">
+</head>
 
-                    <section id="section summary">
-        <h2>About Me</h2>
-        <p>I am <strong>Hanie Fe Marie C. Junio</strong>, 20 years old, My core strength is a blend of patience and hyper-focus on detail, traits that ensure I see complex tasks through to successful completion. 
-            I am a true "trust the process" believer, I prioritize clear methodology, planning, and thorough review, which consistently leads high-quality outcomes.</p>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#section-summary">About</a></li>
+                <li><a href="#section-Background">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav >
+        <img src="../../../img/hanie.jpg" alt="Hanie Fe Junio">
+        <h1>Hanie Fe Marie C. Junio</h1>
+        <p class="tagline">Full Stack Developer | Digital Artist | Team Leader</p>
+        <div class="contact-info" id="home">
+            <span>+939303159167</span> |
+            <span>haniejunio19@gmail.com </span> |
+            <a href="https://github.com/hfmjunio" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section summary">
+            <h2></h2>
         </section>
 
-        
-        <section id="section summary">
-        <h2>Resume</h2>
-        <div class="card">
-            <h3>Educational Background</h3>
-            <ul>
-            <li>San Bartolome Elementary School (2010 – 2016)</li>
-            <li>Mount Charmel School For Achievers (2016 – 2020)</li>
-            <li>Mount Charmel School For Achievers (2020 – 2022)</li>
-            </ul>
-        </div>
+        <section id="section-summary">
+            <h2>About Me</h2>
+            <p>I am <strong>Hanie Fe Marie C. Junio</strong>, 20 years old, My core strength is a blend of patience and
+                hyper-focus on detail, traits that ensure I see complex tasks through to successful completion.
+                I am a true "trust the process" believer, I prioritize clear methodology, planning, and thorough review,
+                which consistently leads high-quality outcomes.</p>
+        </section>
 
-        <div class="card">
-            <h3>Skills & Hobbies</h3>
-            <ul class="skills">
-            <li>Dancing</li>
-            <li>Digital Artist</li>
-            <li>Website Developer</li>
-            <li>Gaming</li>
-            <li>Music Listening</li>
-            <li>Coding</li>
-            <li>Networking (CCNA 1 and 2 Certified)</li>
-            </ul>
-        </div>
-            
 
-        <section id="contact">
-      <h2>Contact Me</h2>
-      <form onsubmit="sendMessage(event)">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-            </main>
+        <section id="section-Background">
+            <h2>Resume</h2>
+            <div class="card">
+                <h3>Educational Background</h3>
+                <ul>
+                    <li>San Bartolome Elementary School (2010 – 2016)</li>
+                    <li>Mount Charmel School For Achievers (2016 – 2020)</li>
+                    <li>Mount Charmel School For Achievers (2020 – 2022)</li>
+                </ul>
+            </div>
 
-        <button id="printButton">Print / Save as PDF</button>
+            <div class="card">
+                <h3>Skills & Hobbies</h3>
+                <ul class="skills">
+                    <li>Dancing</li>
+                    <li>Digital Artist</li>
+                    <li>Website Developer</li>
+                    <li>Gaming</li>
+                    <li>Music Listening</li>
+                    <li>Coding</li>
+                    <li>Networking (CCNA 1 and 2 Certified)</li>
+                </ul>
+            </div>
 
-        <script src="../js/hanie.js"></script>
-    </body>
-    </html>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form onsubmit="sendMessage(event)">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+    </main>
+
+    <a href="../hanie.pdf" download="Hanie_Fe_Resume.pdf"  ><button id="printButton">Download Resume</button></a>
+
+    <script src="../js/hanie.js"></script>
+</body>
+
+</html>
