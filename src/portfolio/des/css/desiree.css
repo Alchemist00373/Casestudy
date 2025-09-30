@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.resume {
+  width: 900px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* LEFT COLUMN */
+.left {
+  background: #2f3a4b;
+  color: white;
+  padding: 30px 20px;
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+.section-title {
+  margin: 25px 0 12px;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.left ul {
+  list-style: none;
+}
+
+.left ul li {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.skills li::before {
+  content: "• ";
+  color: #ffcc66;
+}
+
+/* RIGHT COLUMN */
+.right {
+  padding: 35px 40px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  background: #f4d2cf;
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 60px;
+  letter-spacing: 1px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.section p {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Divider line before Work Experience */
+.divider {
+  border: none;
+  border-top: 2px solid #222;
+  margin: 8px 0 12px;
+  width: 100%;
+}
+
+.work-item {
+  margin-top: 12px;
+}
+
+.work-item b {
+  font-size: 16px;
+}
+
+/* References */
+.reference-item {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.reference-item strong {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.reference-item .role {
+  font-style: italic;
+  color: #444;
+}
+
+.reference-item .phone {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 14px;
+  font-style: italic;
+  color: #444;
+}
+
+/* Signature */
+.signature {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sig-name {
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  border-bottom: 2px solid #000; /* underline mismo sa name */
+  padding-bottom: 3px;
+}
+
+.sig-applicant {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.download-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-btn button {
+  background: #2f3a4b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn button:hover {
+  background: #ffcc66;
+  color: #2f3a4b;
+}
