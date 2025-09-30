@@ -4,6 +4,7 @@
     e.target.reset();
     }
 
+
     window.addEventListener("scroll", () => {
   let sections = document.querySelectorAll("section");
   let navLinks = document.querySelectorAll("nav ul li a");
@@ -23,4 +24,5 @@
       });
     }
   });
+  
 });
