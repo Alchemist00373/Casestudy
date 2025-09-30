@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Lenard Valencia | Portfolio</title>
   <link rel="stylesheet" href="../css/lenard.css">
 </head>
+
 <body>
 
   <!-- Navigation -->
   <nav>
-  <a href="../resume.pdf" download="JohnLenardValencia_Resume.pdf" class="download-btn">📄 Download Resume</a>
+    <a href="../resume.pdf" download="JohnLenardValencia_Resume.pdf" class="download-btn">📄 Download Resume</a>
     </section>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -32,15 +34,15 @@
 
 
 
-    <!-- About Section -->
+  <!-- About Section -->
   <div class="container">
 
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I am <strong>John Lenard Valencia</strong>, I am John Lenard Valencia, 21 years old, an 
-        IT student who loves exploring web development, coding, and creating small projects that solve 
-        real problems. I enjoy learning new technologies, experimenting with ideas, and improving my 
-        skills through hands-on experience. I’m motivated to grow as a developer and contribute to 
+      <p>Hello! I am <strong>John Lenard Valencia</strong>, I am John Lenard Valencia, 21 years old, an
+        IT student who loves exploring web development, coding, and creating small projects that solve
+        real problems. I enjoy learning new technologies, experimenting with ideas, and improving my
+        skills through hands-on experience. I’m motivated to grow as a developer and contribute to
         projects that are both useful and interesting.</p>
     </section>
 
@@ -68,16 +70,17 @@
 
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form onsubmit="sendMessage(event)">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" name="from_name" placeholder="Your Name" required>
+          <input type="email" name="from_email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
   </div>
 
   <footer>
@@ -86,4 +89,5 @@
 
   <script src="../java/port.js"></script>
 </body>
+
 </html>

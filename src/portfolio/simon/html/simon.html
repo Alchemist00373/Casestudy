@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simon Jay Mariano | Portfolio</title>
   <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
 
   <!-- Navigation -->
   <nav>
-  <a href="../resume.pdf" download="SimonJayMariano_Resume.pdf" class="download-btn">📄 Download Resume</a>
+    <a href="../resume.pdf" download="SimonJayMariano_Resume.pdf" class="download-btn">📄 Download Resume</a>
     </section>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="#resume">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -32,18 +34,19 @@
 
 
 
-    <!-- About Section -->
+  <!-- About Section -->
   <div class="container">
 
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I am <strong>Simon Jay Mariano</strong>, 20 years old, passionate about technology, coding, and networking. 
-      I enjoy working on web development, gaming, and exploring creative projects. My goal is to grow as a developer 
-      and contribute to meaningful software solutions.</p>
+      <p>Hello! I am <strong>Simon Jay Mariano</strong>, 20 years old, passionate about technology, coding, and
+        networking.
+        I enjoy working on web development, gaming, and exploring creative projects. My goal is to grow as a developer
+        and contribute to meaningful software solutions.</p>
     </section>
 
     <section id="resume">
-      <h2>Resume</h2>
+      <h2>Educational Background</h2>
       <div class="card">
         <h3>Educational Background</h3>
         <ul>
@@ -68,16 +71,16 @@
 
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form onsubmit="sendMessage(event)">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" name="from_name" placeholder="Your Name" required>
+          <input type="email" name="from_email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
   </div>
 
   <footer>
@@ -86,4 +89,5 @@
 
   <script src="../java/port.js"></script>
 </body>
+
 </html>

@@ -1,28 +1,31 @@
-// Contact alert
-function sendMessage(e) {
-  e.preventDefault();
-  alert("✅ Thank you! Your message has been received.");
-  e.target.reset();
-}
+document.addEventListener('DOMContentLoaded', function () {
+  emailjs.init("t-TVKXpygBu9st5lL"); // Your EmailJS public key
 
-// for scroll
-window.addEventListener("scroll", () => {
-  let sections = document.querySelectorAll("section");
-  let navLinks = document.querySelectorAll("nav ul li a");
+  const form = document.getElementById('contact-form');
+  if (!form) {
+    console.error("Form with id='contact-form' not found");
+    return;
+  }
 
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 100;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        document
-          .querySelector("nav ul li a[href*=" + id + "]")
-          .classList.add("active");
-      });
+    const nameValue = form.querySelector('input[name="name"]').value || '';
+    let subjectInput = form.querySelector('input[name="subject"]');
+    if (subjectInput) {
+      subjectInput.value = `Tourism Inquiry from ${nameValue}`;
     }
+    const serviceID = 'service_zgk114s';
+    const templateID = 'template_x7q9jr9';
+
+    emailjs.sendForm(serviceID, templateID, form)
+      .then(function (response) {
+        console.log('SUCCESS', response);
+        alert("✅ Message sent successfully! We'll get back to you soon.");
+        form.reset();
+      }, function (error) {
+        console.error('FAILED', error);
+        alert("❌ Failed to send message. Check console for details.");
+      });
   });
 });
