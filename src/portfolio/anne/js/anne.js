@@ -1,5 +1,4 @@
   const links = document.querySelectorAll('nav a');
-
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       const target = document.querySelector(link.getAttribute('href'));
