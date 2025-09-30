@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-
+  <title>Discover Tarlac</title>
+  <link rel="icon" href="../src/img/discoverTarlac-modified.png" type="image/png">
   <link rel="stylesheet" href="../src/css/home.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Link your custom JS file -->
+  <script src="../src/js/email.js"></script>
 
 <body>
   <!--  Header Section  -->
@@ -20,9 +23,11 @@
       </div>
 
       <ul class="navlinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="../src/html/Tourist.html">Tourist</a></li>
-        <li><a href="../src/html/AboutUs.html">About</a></li>
+
+        <li><a href="index.html" class="active">Home</a></li>
+        <li> <a href="html/Discover.html">Discover</a></li>
+        <li> <a href="html/AboutUs.html">About</a></li>
+
       </ul>
     </nav>
   </header>
@@ -44,7 +49,7 @@
         <p>Your gateway on knowing the province of Tarlac. Learn more about Tarlac’s rich history, culture, and hidden
           destinations.</p>
 
-        <button class="btn">Explore Now</button>
+        <a href="html/Discover.html"><button class="btn">Explore Now</button></a>
       </div>
 
       <!-- left right container (email form) -->
@@ -112,9 +117,9 @@
       <div>
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="#">Tourist</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html/Discover.html">Tourist</a></li>
+          <li><a href="html/AboutUs.html">About</a></li>
         </ul>
       </div>
     </div>
