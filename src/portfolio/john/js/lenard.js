@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const serviceID = 'service_zgk114s';       
-    const templateID = 'template_x7q9jr9';       
+    const nameValue = form.querySelector('input[name="name"]').value || '';
+    let subjectInput = form.querySelector('input[name="subject"]');
+    if (subjectInput) {
+      subjectInput.value = `Tourism Inquiry from ${nameValue}`;
+    }
+    const serviceID = 'service_zgk114s';
+    const templateID = 'template_x7q9jr9';
 
     emailjs.sendForm(serviceID, templateID, form)
       .then(function (response) {
