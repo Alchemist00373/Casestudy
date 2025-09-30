@@ -92,14 +92,131 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-.backgound {
+ 
+.hero {
     flex: 1;
     min-height: calc(100vh - 120px);
 }
+ 
+
+section{
+    width: calc(100vw - 6);
+    height: 95vh;
+    background-color: #EFF5D2;
+    display: grid;
+    grid-template-columns: 900px 900px;
+    grid-auto-rows: 400px;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+
+}
 
 
+.parks, .nature, .cafe, .churches{
+    border-radius: 60px;
+}
 
+
+.filter-blur{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-radius: 60px;
+}
+
+.background-parks{
+    background-image: url('../img/park.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+
+
+.parks h1, .nature h1, .churches h1{
+    z-index: 2;
+    color: white;
+    font-size: 90px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.background-nature{
+    background-image: url('../img/nature.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+
+.background-cafe{
+    background-image: url('../img/restaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+
+.cafe h1{
+    text-align: center;
+    z-index: 2;
+    color: white;
+    font-size: 90px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.churches{
+    border-radius: 60px;
+    background-color: aqua;
+}
+
+.background-churches{
+    background-image: url('../img/church.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+
+.parks, .nature, .cafe, .churches {
+    border-radius: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+}
+
+.parks:hover, .nature:hover, .cafe:hover, .churches:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+    z-index: 5; 
+}
+ 
 
 /* ===== Footer ===== */
 footer {
