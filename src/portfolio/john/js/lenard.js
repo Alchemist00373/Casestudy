@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init("t-TVKXpygBu9st5lL"); // Your EmailJS public key
+  emailjs.init("t-TVKXpygBu9st5lL");
+
 
   const form = document.getElementById('contact-form');
   if (!form) {
@@ -7,16 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const nameValue = form.querySelector('input[name="name"]').value || '';
-    let subjectInput = form.querySelector('input[name="subject"]');
-    if (subjectInput) {
-      subjectInput.value = `Tourism Inquiry from ${nameValue}`;
-    }
-    const serviceID = 'service_zgk114s';
-    const templateID = 'template_x7q9jr9';
+    const serviceID = 'service_a2woqce';
+    const templateID = 'template_5c6y6dm';
 
     emailjs.sendForm(serviceID, templateID, form)
       .then(function (response) {
