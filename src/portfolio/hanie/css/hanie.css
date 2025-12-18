@@ -79,7 +79,7 @@ body {
     padding: 30px;
 }
 
-img {
+.profile-img {
     width: 130px;
     height: 130px;
     object-fit: cover;
@@ -284,6 +284,230 @@ img {
     }
 
     #printButton {
-        display: none; /* Hide the button when printing */
+        display: none;
     }
 }
+
+        .apisection {
+            padding: 40px 20px;
+            background: rgb(154, 214, 15);
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .api-header {
+            text-align: center;
+            color: #313131;
+            margin-bottom: 30px;
+        }
+
+        .api-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .api-header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 90%;
+            padding: 15px 60px 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 10px 20px;
+            background: rgb(6, 194, 0);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            transform: scale(1.05);
+        }
+
+        .search-container button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 40px;
+        }
+
+        .error-message {
+            background: rgba(255, 0, 0, 0.2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .no-results {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 40px;
+        }
+
+        .artworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .artwork-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .artwork-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .artwork-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+
+        .artwork-info {
+            padding: 20px;
+        }
+
+        .artwork-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .artwork-artist {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .artwork-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .modal-artist {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .modal-date {
+            font-size: 1em;
+            color: #999;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 1001;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+            color: #f5576c;
+        }
+
+        .loading, .error-message, .no-results {
+            display: none;
+        }

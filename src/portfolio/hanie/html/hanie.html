@@ -18,7 +18,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav >
-        <img src="../../../img/hanie.jpg" alt="Hanie Fe Junio">
+        <img src="../../../img/hanie.jpg" alt="Hanie Fe Junio" class="profile-img">
         <h1>Hanie Fe Marie C. Junio</h1>
         <p class="tagline">Full Stack Developer | Digital Artist | Team Leader</p>
         <div class="contact-info" id="home">
@@ -97,18 +97,29 @@
                 <button onclick="searchArtworks()" id="searchBtn">Search</button>
             </div>
 
-            <div id="loadingContainer" class="loading" style="display: none;">
+            <div id="loadingContainer" class="loading" >
                 Searching the gallery...
             </div>
 
-            <div id="errorContainer" class="error-message" style="display: none;"></div>
+            <div id="errorContainer" class="error-message" ></div>
 
-            <div id="noResults" class="no-results" style="display: none;">
+            <div id="noResults" class="no-results" >
                 No artworks found. Try a different search term.
             </div>
 
             <div id="artworksGrid" class="artworks-grid"></div>
 
+            <div id="artModal" class="modal" onclick="closeModal(event)">
+                <span class="close-modal" onclick="closeModal(event)">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" class="modal-image" alt="">
+                    <div class="modal-info">
+                        <div id="modalTitle" class="modal-title"></div>
+                        <div id="modalArtist" class="modal-artist"></div>
+                        <div id="modalDate" class="modal-date"></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <a href="../hanie.pdf" download="Hanie_Fe_Resume.pdf"  ><button id="printButton">Download Resume</button></a>

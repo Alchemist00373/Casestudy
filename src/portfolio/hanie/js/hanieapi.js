@@ -12,6 +12,7 @@ let artworks = [];
             const artworksGrid = document.getElementById('artworksGrid');
             const searchBtn = document.getElementById('searchBtn');
 
+            // Show loading, hide everything else
             loadingContainer.style.display = 'block';
             errorContainer.style.display = 'none';
             noResults.style.display = 'none';
@@ -54,10 +55,11 @@ let artworks = [];
             artworks.forEach(artwork => {
                 const card = document.createElement('div');
                 card.className = 'artwork-card';
+                card.onclick = () => openModal(artwork);
                 
                 card.innerHTML = `
                     <img 
-                        src="${getImageUrl(artwork.image_id)}"
+                        src="${getImageUrl(artwork.image_id)}" 
                         alt="${artwork.title}"
                         class="artwork-image"
                         loading="lazy"
@@ -72,3 +74,38 @@ let artworks = [];
                 artworksGrid.appendChild(card);
             });
         }
+
+        function openModal(artwork) {
+            const modal = document.getElementById('artModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalArtist = document.getElementById('modalArtist');
+            const modalDate = document.getElementById('modalDate');
+
+            modalImage.src = getImageUrl(artwork.image_id);
+            modalImage.alt = artwork.title;
+            modalTitle.textContent = artwork.title;
+            modalArtist.textContent = artwork.artist_display || 'Unknown Artist';
+            modalDate.textContent = artwork.date_display || 'Date Unknown';
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById('artModal');
+            if (event.target === modal || event.target.className === 'close-modal') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('artModal');
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
