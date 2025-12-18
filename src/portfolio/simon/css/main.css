@@ -15,14 +15,14 @@ body {
 nav {
   background: #556B2F;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  position: relative; 
+  position: relative;
 }
 
 nav ul {
-  list-style: none; 
+  list-style: none;
   display: flex;
   gap: 2rem;
 }
@@ -126,11 +126,11 @@ h2 {
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card li{
-      list-style: none;
+.card li {
+  list-style: none;
 }
 
 /* Skills List */
@@ -156,14 +156,17 @@ form {
   gap: 1rem;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   padding: 0.7rem;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   background: #EFF5D2;
   border: 2px solid #C6D870;
   color: #556B2F;
@@ -189,4 +192,26 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.card iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card button {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #556B2F;
+  color: #EFF5D2;
+}
+
+html {
+  scroll-behavior: smooth;
 }

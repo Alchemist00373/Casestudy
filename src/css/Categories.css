@@ -11,7 +11,7 @@ img{
     text-align: center;
     padding: 30px 400px 100px 400px;
     background-color: #8FA31E;
-    color: white;
+    color: rgb(0, 0, 0);
     background-image: url('../img/park.jpg');
     background-repeat: no-repeat;
     background-size: cover;
