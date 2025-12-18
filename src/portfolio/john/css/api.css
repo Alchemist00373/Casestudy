@@ -1,0 +1,67 @@
+.pokemon{
+    font-family: sans-serif;
+    color: rgb(136, 4, 4);
+    font-weight: bold;
+}
+
+.pokemon-container{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: green;
+    align-items: center;
+    justify-content: center;
+    width: 52rem;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+#pokemonName{
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 18px;
+    border: solid 1px;
+}
+
+#suggestions{
+    background-color: white;
+    width: 300px;
+    border: solid 2px;
+    border-color: rgb(136, 4, 4);
+    border-radius: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.getPokemon{
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 18px;
+    border: none;
+    background:linear-gradient(400deg, rgb(209, 6, 6), rgb(180, 5, 5));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 300px;
+}
+
+.getPokemon:hover{
+    opacity: 0.8;
+}
+
+.getPokemon:active{
+   opacity: 0.6;
+}
+
+#result{
+    margin-top: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
