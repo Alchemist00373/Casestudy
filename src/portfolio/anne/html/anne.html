@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Resume Portfolio</title>
   <link rel="stylesheet" href="../css/anne.css">
+  <link rel="stylesheet" href="../css/api.css">
 </head>
 <body>
 
@@ -67,6 +68,21 @@
   </section>
 </div>
 
-<script type="module" src="../js/anne.js"></script>c
+<section class="api-project">
+<h1 class="project">My API Project</h1>
+<div class="api-container">
+    <h1 class="dictionary">📘 Dictionary App</h1>
+
+    <div class="search-box">
+        <input type="text" id="wordInput" placeholder="Enter a word">
+        <button onclick="searchWord()">Search</button>
+    </div>
+
+    <div id="result" class="result"></div>
+</div>
+</section>
+
+<script type="module" src="../js/anne.js"></script>
+<script src="../js/api.js"></script>
 </body>
 </html>
