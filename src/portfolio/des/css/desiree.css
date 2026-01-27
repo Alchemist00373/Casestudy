@@ -195,3 +195,53 @@ body {
   background: #ffcc66;
   color: #2f3a4b;
 }
+
+.calendar-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+#calendar-container {
+  margin-top: 15px;
+}
+
+.calendar-loading {
+  text-align: center;
+  color: #666;
+}
+
+.calendar-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.holiday-item {
+  padding: 12px;
+  background: white;
+  border-left: 4px solid #2f3a4b;
+  border-radius: 4px;
+}
+
+.holiday-name {
+  color: #333;
+  font-weight: bold;
+}
+
+.holiday-date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.calendar-footer {
+  margin-top: 15px;
+  font-size: 0.85em;
+  color: #888;
+  text-align: center;
+}
+
+.calendar-error {
+  color: #999;
+  text-align: center;
+}
